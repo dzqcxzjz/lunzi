@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js手风琴效果</title>
+	<style>
+    *{margin: 0px;padding: 0px;}
+    li{
+    	width: 10px;
+    	border: 1px solid;
+    	overflow: hidden;
+    	list-style: none;
+    	float: left;
+    }
+	</style>
+	<script type="text/javascript" src='js/zQuery.js'></script>
+	<script>
+		window.onload=function(){
+			var oUl=document.getElementById("pics");
+			var aLi=document.getElementsByTagName("li");
+			var oImg=aLi[0].getElementsByTagName("img")[0];
+            var width=oImg.offsetWidth;
+            aLi[0].style.width=width+"px";
+            var t=null;
+            var oPli=aLi[0];
+            var n=aLi.length;
+            var inow=1;
+            t=setInterval(function(){
+            	move(oPli,{width:[10]});
+            	width=oPli.getElementsByTagName("img")[0].offsetWidth;
+            	move(aLi[inow],{width:[width]});
+            	oPli=aLi[inow];
+            	inow++;
+            	if(inow==n){
+            		inow=0;
+            	}            	
+            },2000);
+
+            oUl.onmouseover=function(){
+            	clearInterval(t);
+            }
+            oUl.onmouseout=function(){
+            t=setInterval(function(){
+            	move(oPli,{width:[10]});
+            	width=oPli.getElementsByTagName("img")[0].offsetWidth;
+            	move(aLi[inow],{width:[width]});
+            	oPli=aLi[inow];
+            	inow++;
+            	if(inow==n){
+            		inow=0;
+            	}            	
+            },2000);            	
+            }
+            for(var i=0;i<n;i++){
+            	aLi[i].index=i;
+            	aLi[i].onclick=function(){
+            		move(oPli,{width:[10]});
+            		inow=this.index;
+            		move(aLi[inow],{width:[width]});
+            		oPli=aLi[inow];
+            	}
+            }
+		}
+	</script>
+</head>
+<body>
+  <ul id="pics">
+  <li><img src="img/1.jpg" alt="" /></li>
+  <li><img src="img/2.jpg" alt="" /></li>
+  <li><img src="img/3.jpg" alt="" /></li>
+  <li><img src="img/4.jpg" alt="" /></li>
+  <li><img src="img/5.jpg" alt="" /></li>
+  <li><img src="img/6.jpg" alt="" /></li>
+  </ul>	
+</body>
+</html>
