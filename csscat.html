@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    *{margin: 0px;padding: 0px;}
+    .tmall{width: 400px;height: 400px;margin: 100px;position: absolute;left: 300px;}
+    .ear{width: 100%;height: 15%;position: relative;}
+    .earl{width: 18%;height: 100%;position: relative;display: inline-block;
+    	border-top-left-radius: 20% 30%;
+        border-top-right-radius: 80% 100%;
+        background: black;z-index: 0;}
+    .earl:after{
+    	content: "";width: 450%;height: 72%;
+    	position: absolute;left: 84%;bottom: 0;
+    	background: black;
+    }    
+    .earr{width: 18%;height: 100%;position:absolute;display: inline-block;
+    	border-top-right-radius: 20% 30%;
+        border-top-left-radius: 80% 100%;
+        background: black;z-index: 0;
+        right: 0px;}
+    .earm{
+    	width: 76%;height: 100%;
+    	position: absolute;display: inline-block;
+    	left: 12%;bottom: 3%;
+    	border-bottom-left-radius:50% 100%;
+        border-bottom-right-radius:50% 100%;
+        z-index: 1;
+        background: #fff;
+        border-bottom: none;
+    }
+    .face{
+    	width: 100%;height: 25%;
+    	position: relative;background: black;
+    	border-bottom-left-radius: 10%;
+    	border-bottom-right-radius: 10%;
+    }
+    .eyel{
+    	width: 20%;height: 80%;
+    	position: absolute;left: 5%;
+    	border-radius: 100%;
+    	background: #fff;
+    	z-index: 1;
+    }
+    .eyel:after{
+    	content: "";
+    	width: 20%;height: 100%;
+    	position: absolute;left: 40%;
+    	border-radius: 100%;
+    	background: black;
+    	z-index: 1;
+    }
+    .eyer{
+    	width: 20%;height: 80%;
+    	position: absolute;right: 5%;
+    	border-radius: 100%;
+    	background: #fff;
+    	z-index: 1;    	
+    }
+    .eyer:after{
+    	content: "";
+    	width: 20%;height: 100%;
+    	position: absolute;left: 40%;
+    	border-radius: 100%;
+    	background: black;
+    	z-index: 1;    	
+    }
+    .face:after{
+    	content: "";
+    	position: absolute;
+    	border-top: 1em solid white;
+    	border-bottom: 1em solid transparent;
+    	border-left: 1em solid transparent;
+    	border-right: 1em solid transparent;
+    	border-radius: 38%;
+    	z-index: 0; 
+    	left: 46.5%;top: 30%;
+    }
+    .mouthl{
+    	width: 10%;height: 25%;
+    	position: absolute;left: 40%;top: 50%;
+    	border-radius: 100%;
+    	border-bottom: 0.4em solid white;
+    	z-index: 1;
+    }
+    .mouthr{
+    	width: 10%;height: 25%;
+    	position: absolute;right: 40%;top: 50%;
+    	border-radius: 100%;
+    	border-bottom: 0.4em solid white;
+    	z-index: 1;
+    }    
+    .bodyt{
+    	width: 20%;height: 25%;position: relative;left: 40%;
+    	background: black;
+    }
+    .bodyb{width:20%;height:25%;position:relative;left:40%;background:black;}   
+    .bodyt:before{
+position: absolute;
+width: 50%;
+content: '';
+border-top: 0 solid transparent;
+border-bottom: 1.5em solid black;
+border-left: 6em solid transparent;
+border-right: 0 solid transparent;
+right: 42%;top: 73%;
+-webkit-transform: rotate(-20deg);
+-moz-transform: rotate(-20deg);
+-o-transform:rotate(-20deg);
+-ms-transform:rotate(-20deg);
+transform:rotate(-20deg);   	
+    }
+.bodyt:after{
+position: absolute;left:42%;top:73%;
+width: 50%;
+content: '';
+border-top: 0 solid transparent;
+border-bottom: 1.5em solid black;
+border-left: 0 solid transparent;
+border-right: 6em solid transparent;
+-webkit-transform: rotate(20deg);
+-moz-transform: rotate(20deg);
+-o-transform:rotate(20deg);
+-ms-transform:rotate(20deg);
+transform:rotate(20deg);
+}
+.bodyb:before{
+position:absolute;
+width:50%;
+content:'';
+border-top: 0;
+border-bottom: 4em solid transparent;
+border-left: 1em solid black;
+border-right: 0;
+left:0;top:100%;
+
+}
+.bodyb:after{
+position:absolute;
+width:50%;
+content:'';
+border-top: 0;
+border-bottom: 4em solid transparent;
+border-right: 1em solid black;
+border-left: 0;
+right:0;top:100%;
+}  
+.text{
+width:200px;
+margin:10px auto;
+}
+	</style>
+</head>
+<body>
+	<div class="tmall">
+		<div class="ear">
+			<span class="earl"></span>
+			<span class="earm"></span>
+			<span class="earr"></span>
+		</div>
+        <div class="face">
+        	 <span class="eyel"></span>
+        	 <span class="eyer"></span>
+        	 <span class="mouthl"></span>
+        	 <span class="mouthr"></span>
+        </div>
+        <div class="bodyt"></div>
+        <div class="bodyb"></div>
+	</div>
+	    <div class="text">CSS3 天貓logo</div>
+</body>
+</html>
